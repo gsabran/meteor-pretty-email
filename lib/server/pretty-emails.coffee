@@ -31,7 +31,6 @@ PrettyEmail =
 
   send: (template, options) ->
     options = _.extend {}, @options, options
-
     Email.send
       from: options.from
       to: options.to

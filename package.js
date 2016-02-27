@@ -1,5 +1,5 @@
 Package.describe({
-  name: "yogiben:pretty-email",
+  name: "gsabran:pretty-email",
   summary: "Send pretty emails",
   version: "0.0.7",
   git: "https://github.com/yogiben/meteor-pretty-email"
@@ -8,14 +8,14 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@1.0');
 
-  api.use('coffeescript');
-  api.use('email');
-  api.use('underscore');
+  api.use('coffeescript', 'server');
+  api.use('email', 'server');
+  api.use('underscore', 'server');
   api.use([
     'accounts-base',
     'accounts-password'
-  ], { weak: true });
-  api.use('cmather:handlebars-server@2.0.0');
+  ], 'server', { weak: true });
+  api.use('cmather:handlebars-server@2.0.0', 'server');
 
   api.addFiles(
     [
